@@ -1,0 +1,36 @@
+{
+  "name": "customer-satisfaction-survey-skill",
+  "version": "1.0.0",
+  "description": "Calculates Net Promoter Score (NPS) metrics and groups customers into Promoters, Passives, or Detractors.",
+  "author": "alphaparkinc",
+  "category": "support",
+  "tags": [
+    "nps",
+    "csat",
+    "survey",
+    "customer-feedback",
+    "support"
+  ],
+  "inputs": {
+    "scores": {
+      "type": "array",
+      "description": "Array of NPS ratings (0 to 10 scale)."
+    }
+  },
+  "outputs": {
+    "nps_score": {
+      "type": "integer",
+      "description": "Net Promoter Score from -100 to 100."
+    },
+    "percentage_promoters": {
+      "type": "number",
+      "description": "Percent of promoters (9-10)."
+    },
+    "percentage_detractors": {
+      "type": "number",
+      "description": "Percent of detractors (0-6)."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
